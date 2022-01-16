@@ -14,17 +14,17 @@ var colour = function() {
         }
         
         if (date > hour){
-            $(this).siblings("span").removeClass('future');
-            $(this).siblings("span").removeClass('present');
-            $(this).siblings("span").addClass('past');
+            $(this).siblings("input").removeClass('future');
+            $(this).siblings("input").removeClass('present');
+            $(this).siblings("input").addClass('past');
         }else if(date < hour) {
-            $(this).siblings("span").removeClass('past');
-            $(this).siblings("span").removeClass('present');
-            $(this).siblings("span").addClass('future');
+            $(this).siblings("input").removeClass('past');
+            $(this).siblings("input").removeClass('present');
+            $(this).siblings("input").addClass('future');
         }else{
-            $(this).siblings("span").removeClass('past');
-            $(this).siblings("span").removeClass('future');
-            $(this).siblings("span").addClass('present');
+            $(this).siblings("input").removeClass('past');
+            $(this).siblings("input").removeClass('future');
+            $(this).siblings("input").addClass('present');
         }
     });
 }
@@ -34,30 +34,6 @@ setInterval(function () {
 }, (1000 * 60) * 5);
 colour();
 
-$(".container").on("click", "span", function() {
-    var text = $(this)
-        .text()
-        .trim();
-        console.log(text);
-    var textInput = $("<textarea>")
-        .addClass("col-8 description")
-        .val(text);
-    $(this).replaceWith(textInput);
-    // textInput.trigger("focus");
-});
 
-$(".container").on("click", "button", function() {
-    //console.log(this);
-//     // get the textarea's current value/text
-    var text = $(this).siblings("textarea")
-       .val()
-       .trim();
-    //console.log(text);
-    var taskSpan = $("<span>")
-       .addClass("col-8 description")
-       .text(text);
-    //console.log(taskSpan);
-//     // replace textarea with p element
-     $("textarea").replaceWith(taskSpan);
-     colour();
-});
+
+   
