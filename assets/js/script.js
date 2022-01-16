@@ -12,35 +12,52 @@ var colour = function() {
         if (hour < 9){
             hour += 12;
         }
-        console.log(this);
-        console.log(date);
-        console.log(hour);
-        //debugger;
+        
         if (date > hour){
             $(this).siblings("span").removeClass('future');
             $(this).siblings("span").removeClass('present');
             $(this).siblings("span").addClass('past');
-            console.log(this);
-            console.log("This task is in the past.");
-        }
-        if(date < hour) {
+        }else if(date < hour) {
             $(this).siblings("span").removeClass('past');
             $(this).siblings("span").removeClass('present');
             $(this).siblings("span").addClass('future');
-            console.log("This task is in the future.");
-        }
-        if (date === hour){
+        }else{
             $(this).siblings("span").removeClass('past');
             $(this).siblings("span").removeClass('future');
             $(this).siblings("span").addClass('present');
-            console.log("This task is in the present.");
         }
     });
-
 }
-//debugger;
-colour();
 
 setInterval(function () {
     colour();
 }, (1000 * 60) * 5);
+colour();
+
+$(".container").on("click", "span", function() {
+    var text = $(this)
+        .text()
+        .trim();
+        console.log(text);
+    var textInput = $("<textarea>")
+        .addClass("col-8 description")
+        .val(text);
+    $(this).replaceWith(textInput);
+    // textInput.trigger("focus");
+});
+
+$(".container").on("click", "button", function() {
+    //console.log(this);
+//     // get the textarea's current value/text
+    var text = $(this).siblings("textarea")
+       .val()
+       .trim();
+    //console.log(text);
+    var taskSpan = $("<span>")
+       .addClass("col-8 description")
+       .text(text);
+    //console.log(taskSpan);
+//     // replace textarea with p element
+     $("textarea").replaceWith(taskSpan);
+     colour();
+});
