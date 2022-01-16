@@ -17,16 +17,22 @@ var colour = function() {
         console.log(hour);
         //debugger;
         if (date > hour){
-            $(".container").children("article").children("span").addClass("col-8 description past");
+            $(this).siblings("span").removeClass('future');
+            $(this).siblings("span").removeClass('present');
+            $(this).siblings("span").addClass('past');
             console.log(this);
             console.log("This task is in the past.");
         }
         if(date < hour) {
-            $(".description").addClass("col-8 description future");
+            $(this).siblings("span").removeClass('past');
+            $(this).siblings("span").removeClass('present');
+            $(this).siblings("span").addClass('future');
             console.log("This task is in the future.");
         }
         if (date === hour){
-            $(".description").addClass("col-8 description present");
+            $(this).siblings("span").removeClass('past');
+            $(this).siblings("span").removeClass('future');
+            $(this).siblings("span").addClass('present');
             console.log("This task is in the present.");
         }
     });
@@ -34,3 +40,7 @@ var colour = function() {
 }
 //debugger;
 colour();
+
+setInterval(function () {
+    colour();
+}, (1000 * 60) * 5);
