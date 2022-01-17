@@ -1,8 +1,18 @@
-var tasks  = [];
-
 setInterval(function () {
     $("#currentDay").text(moment().format("[Today is] dddd, MMMM Do YYYY, h:mm:ss a"));
 }, 1000);
+
+function loadTasks() {
+    for (var i = 0; i < 9; i++) {
+        var key = "hour" + i;
+        var id = "#" + key;
+        var task = JSON.parse(localStorage.getItem(key));
+    var para = $(id).find("p");
+    para.text(task);
+    }
+}
+
+loadTasks();
 
 var colour = function() {
     var date = moment().hour();
@@ -34,27 +44,6 @@ setInterval(function () {
 }, (1000 * 60) * 5);
 colour();
 
-// $(".description").on("click", function (){
-//     var text = $(this).text().trim();
-//     var textInput = $("<textarea>")
-//      .addClass("col-8 description")
-//      .val(text);
-//      $(this).replaceWith(textInput);
-//      //console.log(textInput);
-// });
-
-// $(".saveBtn").on("click", function() { //ocure cuando apreto el boton que yo le hize click.
-//     var parent = $(this).parent();
-//     var text = parent.find("textarea").val();
-//     var id = parent.attr("id");
-//     //console.log(text);
-//     var textInput = $("<p>")
-//         .addClass("col-8 description")
-//         .text(text);
-//         parent.find("textarea").replaceWith(textInput);
-//     colour();
-//  });
-
 $(".row").on("click", "p", function() {
     var text = $(this)
         .text()
@@ -79,4 +68,9 @@ $(".row").on("click", "button", function() {
        .text(text);
     $(this).siblings("textarea").replaceWith(taskSpan);
     colour();
+    saveTask(id, text);
 });
+
+function saveTask(id ,text) {
+    localStorage.setItem(id, JSON.stringify(text));
+}
