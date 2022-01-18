@@ -51,14 +51,14 @@ The steps I took to coplete this challenge were:
    - Each hour block has its own entry in the localStorage.
 - Styled the website.
 ![Preview of the web site. Score.](https://github.com/NicolasRojas-CENG/WorkDayScheduler/blob/a6b66970960d5a9c9cec78af1c0bd6c413c23ead/assets/images/styling.PNG "Preview of the web site. Saved tasks.")
+- Added styling for smaller screens.
 
 ## Preview of the web site
-![Preview of the web site. Instruction screen.](https://github.com/NicolasRojas-CENG/JavaScript_Quiz/blob/e38afc8f6c0f1e0e08780608aaa4850ab96542bc/resources/images/final_instructionScreen.PNG "Preview of the web site. Instruction screen.")
-![Preview of the web site. Quiz screen.](https://github.com/NicolasRojas-CENG/JavaScript_Quiz/blob/e38afc8f6c0f1e0e08780608aaa4850ab96542bc/resources/images/final_quizScreen.PNG "Preview of the web site. Quiz screen.")
-![Preview of the web site. Results screen, no name entered.](https://github.com/NicolasRojas-CENG/JavaScript_Quiz/blob/e38afc8f6c0f1e0e08780608aaa4850ab96542bc/resources/images/final_resultsScreen_noName.PNG "Preview of the web site. Results screen, no name entered.")
-![Preview of the web site. Results screen, name entered.](https://github.com/NicolasRojas-CENG/JavaScript_Quiz/blob/e38afc8f6c0f1e0e08780608aaa4850ab96542bc/resources/images/final_resultsScreen_yesName.PNG "Preview of the web site. Results screen, name entered.")
-![Preview of the web site. Scores screen, no scores saved.](https://github.com/NicolasRojas-CENG/JavaScript_Quiz/blob/370efff905cfdff77d1e80dd17cd5d88cf48eb67/resources/images/final_scoreScreen_noScore.PNG "Preview of the web site. Scores screen, no scores saved.")
-![Preview of the web site. Scores screen, scores saved.](https://github.com/NicolasRojas-CENG/JavaScript_Quiz/blob/370efff905cfdff77d1e80dd17cd5d88cf48eb67/resources/images/final_resultsScreen_yesName.PNG "Preview of the web site. Scores screen, scores saved.")
+![Preview of the web site. Instruction screen.](https://github.com/NicolasRojas-CENG/WorkDayScheduler/blob/99a8121ecd4432ea4ff189149a03265539a7daf4/assets/images/preview1.PNG "Preview of the web site.")
+![Preview of the web site. Quiz screen.](https://github.com/NicolasRojas-CENG/WorkDayScheduler/blob/99a8121ecd4432ea4ff189149a03265539a7daf4/assets/images/preview2.PNG "Preview of the web site.")
+
+Screenshots were taken at 11:35 pm. That is why all tasks are in the past.
+
 
 ## Completed web application
 ***
