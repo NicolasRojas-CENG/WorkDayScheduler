@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: rgba(191, 224, 230, 0.5);
 }
 
 textarea{
@@ -15,14 +16,19 @@ textarea{
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: rgba(191, 224, 230, 0.3);
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
 }
 
+article{
+  font-family: 'Oswald', sans-serif;
+}
+
 .description{
   white-space: pre-wrap;
+  margin-bottom: 0;
 }
 
 .time-block{
@@ -33,39 +39,61 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  padding-bottom: 10px;
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: transparent;
   color: #000000;
-  border-top: 1px dashed #000000;
+}
+
+.past, .present, .future {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 .past {
-  background-color: #d3d3d3;
-  color: white;
+  background-color: rgba(104, 6, 3, 0.7);
 }
 
 .present {
-  background-color: #ff6961;
-  color: white;
+  background-color: rgba(163, 153, 5, 0.7);
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background-color: rgba(42, 163, 5, 0.7);
+}
+
+.past:hover {
+  background-color: rgba(104, 6, 3, 0.3);
+}
+
+.present:hover {
+  background-color: rgba(163, 153, 5, 0.3);
+}
+
+.future:hover {
+  background-color: rgba(42, 163, 5, 0.3);
+}
+
+.row p {
+  padding-top: 10px;text-align: center;
 }
 
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
   color: white;
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 65%);
+}
+
+.saveBtn:hover > i {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }

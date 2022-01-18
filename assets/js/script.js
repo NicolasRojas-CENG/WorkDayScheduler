@@ -19,9 +19,6 @@ var colour = function() {
     $(".container").children("article").children("h2").each(function () {
         var value = this.textContent.trim();
         var hour = parseInt(value);
-        if (hour < 9){
-            hour += 12;
-        }
         
         if (date > hour){
             $(this).siblings("p").removeClass('future');
@@ -57,7 +54,6 @@ $(".row").on("click", "p", function() {
 $(".row").on("click", "button", function() {
     var parent = $(this).parent();
     console.log(parent);
-    // var text = parent.find("textarea").val();
     var id = parent.attr("id");
     console.log(id);
     var text = $(this).siblings("textarea")
