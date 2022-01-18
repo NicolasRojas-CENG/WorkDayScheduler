@@ -46,7 +46,7 @@ $(".row").on("click", "p", function() {
         .text()
         .trim();
     var textInput = $("<textarea>")
-        .addClass("col-8 description")
+        .addClass("col-5 col-lg-8 description")
         .val(text);
     $(this).replaceWith(textInput);
 });
@@ -60,7 +60,7 @@ $(".row").on("click", "button", function() {
        .val()
        .trim();
     var taskSpan = $("<p>")
-       .addClass("col-8 description")
+       .addClass("col-5 col-lg-8 description")
        .text(text);
     $(this).siblings("textarea").replaceWith(taskSpan);
     colour();
